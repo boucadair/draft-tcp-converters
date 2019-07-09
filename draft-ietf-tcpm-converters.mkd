@@ -1307,7 +1307,7 @@ Transport Converter given the middlebox interference.
 As explained in {{RFC7413}}, some CGNs (Carrier Grade NATs) can affect the
 operation of
 TFO if they assign different IP addresses to the same end host. Such CGNs
-could affect the operation of the TFO Option used by the Convert Protocol.
+could affect the Cookie-based checks used by the Convert Protocol.
 As a reminder CGNs, enabled on the path between a Client and a Transport
 Converter, must adhere to the address preservation defined in {{RFC6888}}.
 See also the discussion in Section 7.1 of {{RFC7413}}.
