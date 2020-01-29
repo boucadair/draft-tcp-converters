@@ -142,13 +142,11 @@ informative:
 
 --- abstract
 
-This document specifies an application proxy, called Transport Converter, to
-assist the deployment of TCP extensions such as Multipath TCP.
-This proxy is designed to avoid inducing extra delay when involved in
-a network-assisted connection (that is, 0-RTT).
+This document specifies an application proxy, called Transport Converter, to assist the deployment of TCP extensions such as Multipath TCP. A Transport Converter may provide conversion service for one or more TCP extensions. The conversion service is provided by means of the 0-RTT TCP Convert Protocol (Convert). 
 
-This specification assumes an explicit model, where the proxy is explicitly
-configured on hosts.
+This protocol provides 0-RTT (Zero Round-Trip Time) conversion service since no extra delay is induced by the protocol compared to connections that are not proxied. Also, the Convert Protocol does not require any encapsulation (no tunnels, whatsoever).
+
+This specification assumes an explicit model, where the Transport Converter is explicitly configured on hosts.
 
 --- Editorial Note (To be removed by RFC Editor)
 
@@ -169,7 +167,7 @@ ways. Some improvements such as changing the initial window size {{RFC6928}}
 or modifying the congestion control scheme can be applied independently on
 clients and servers.
 Other improvements such as Selective Acknowledgments {{RFC2018}} or large
-windows {{RFC7323}} require
+windows {{RFC7323}} require 
 a new TCP option or to change the semantics of some fields in the TCP header.
 These modifications must
 be deployed on both clients and servers to be actually used on the Internet.
